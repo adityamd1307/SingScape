@@ -20,7 +20,7 @@ export default function BookingsPage() {
       try {
         const token = localStorage.getItem("access_token");
         const bookingResponse = await fetch(
-          `http://172.20.10.3:8081/booking/user/${user.id}/details`,
+          `https://singscape.onrender.com/booking/user/${user.id}/details`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

@@ -27,7 +27,7 @@ const CustomerSupport = () => {
       if (user?.id) {
         try {
           const token = localStorage.getItem("access_token");
-          const res = await fetch(`http://172.20.10.3:8081/users/${user.id}`,
+          const res = await fetch(`https://singscape.onrender.com/users/${user.id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

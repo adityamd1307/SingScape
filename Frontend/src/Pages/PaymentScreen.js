@@ -46,7 +46,7 @@ export default function PaymentScreen() {
     };
 
     try {
-      const res = await fetch("http://172.20.10.3:8081/payment/confirm", {
+      const res = await fetch("https://singscape.onrender.com/payment/confirm", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

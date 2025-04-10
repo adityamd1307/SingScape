@@ -57,7 +57,7 @@ export default function LoginScreen() {
       try {
         const token = localStorage.getItem("access_token");
         const checkRes = await fetch(
-          `http://172.20.10.3:8081/users/${user.id}`,
+          `https://singscape.onrender.com/users/${user.id}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -67,7 +67,7 @@ export default function LoginScreen() {
         );
 
         if (checkRes.status === 404) {
-          const createRes = await fetch("http://172.20.10.3:8081/users", {
+          const createRes = await fetch("https://singscape.onrender.com/users", {
             method: "POST",
             headers: {
               Authorization: `Bearer ${token}`,

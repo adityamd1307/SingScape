@@ -13,11 +13,10 @@ export default function ResetPasswordScreen() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    const location = useLocation();
     const params = new URLSearchParams(location.search);
     const emailFromURL = params.get("email") || "";
-    const access_token = localStorage.get("access_token");
-    const refresh_token = localStorage.get("refresh_token");
+    const access_token = localStorage.getItem("access_token");
+    const refresh_token = localStorage.getItem("refresh_token");
 
     if (access_token && refresh_token) {
       supabase.auth
